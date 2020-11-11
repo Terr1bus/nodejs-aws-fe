@@ -21,7 +21,7 @@ export default function PageProductImport() {
     <div className={classes.content}>
       <Box display="flex" alignItems="center">
         <CSVFileImport
-          url={`${API_PATHS.import}/product/import`}
+          url={`${API_PATHS.import}/import`}
           title="Import Products CSV"
         />
         <Button
