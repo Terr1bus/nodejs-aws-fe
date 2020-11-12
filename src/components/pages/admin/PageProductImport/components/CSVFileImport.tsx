@@ -40,12 +40,14 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
       },
     });
     console.log('File to upload: ', file.name);
-    console.log('Uploading to: ', response.data);
-    const result = await fetch(response.data, {
+    console.log('Uploading to: ', response.data.uploadUrl);
+    const result = await fetch(response.data.uploadUrl, {
       method: 'PUT',
       body: file,
     });
     console.log('Result: ', result);
+    const jsonResult = await result.text();
+    console.log({ jsonResult });
     setFile('');
   };
   return (
