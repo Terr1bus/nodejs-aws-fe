@@ -117,8 +117,8 @@ export default function PageProductForm() {
       setIsLoading(false);
       return;
     }
-    axios.get(`${API_PATHS.bff}/product/${id}`).then((res) => {
-      setProduct(res.data);
+    axios.get(`${API_PATHS.bff}/products/${id}`).then((res) => {
+      setProduct(res.data.data.product);
       setIsLoading(false);
     });
   }, [id]);
