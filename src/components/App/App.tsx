@@ -11,7 +11,7 @@ import PageProductImport from 'components/pages/admin/PageProductImport/PageProd
 
 function App() {
   useEffect(() => {
-    localStorage.setItem('authorizationToken', btoa('Terr1bus:TEST_PASSWORD'));
+    localStorage.setItem('authorization_token', btoa('Terr1bus:TEST_PASSWORD'));
   }, []);
 
   return (
